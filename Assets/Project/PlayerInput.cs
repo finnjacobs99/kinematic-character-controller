@@ -7,6 +7,7 @@ public class PlayerInput : MonoBehaviour, PlayerInputActions.IGameplayActions
     public Vector2 Move { get; private set; }
     public Vector2 Look { get; private set; }
     public bool Jump { get; private set; }
+    public bool JumpWasPressed { get; private set; }
     public bool Crouch { get; private set; }
 
     private void OnEnable()
@@ -36,17 +37,19 @@ public class PlayerInput : MonoBehaviour, PlayerInputActions.IGameplayActions
 
     public void OnJump(InputAction.CallbackContext context)
     {
+        Jump = context.ReadValueAsButton();
+
         if (context.started)
         {
-            Jump = true;
+            JumpWasPressed = true;
         }
     }
 
     public bool ConsumeJump()
     {
-        if (Jump)
+        if (JumpWasPressed)
         {
-            Jump = false;
+            JumpWasPressed = false;
             return true;
         }
 
