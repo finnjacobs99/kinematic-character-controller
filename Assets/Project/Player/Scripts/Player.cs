@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
-        playerCharacter.Initialize();
+        playerCharacter.Initialize(_playerInput);
         playerCamera.Initialize(playerCharacter.CameraTarget);
     }
 
@@ -24,6 +24,7 @@ public class Player : MonoBehaviour
     {
         playerCamera.UpdateRotation(_playerInput);
         playerCharacter.UpdateInput(_playerInput, playerCamera.transform.rotation);
+        playerCharacter.UpdateState();
         playerCharacter.UpdateBody();
     }
 

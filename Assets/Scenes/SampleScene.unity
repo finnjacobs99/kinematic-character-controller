@@ -5713,23 +5713,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerCharacter
   motor: {fileID: 2134596082}
+  movementConfig: {fileID: 11400000, guid: 1a95cb41161dccf4f81a03d7cef550c6, type: 2}
   root: {fileID: 1123529898}
   cameraTarget: {fileID: 373828349}
-  walkSpeed: 20
-  crouchSpeed: 10
-  walkMovementResponsiveness: 25
-  crouchMovementResponsiveness: 20
-  airSpeed: 15
-  airAcceleration: 70
-  jumpForce: 20
-  coyoteTime: 0.2
-  jumpSustainGravity: 0.4
-  gravity: -90
-  standHeight: 2
-  crouchHeight: 1
-  crouchAnimationSpeed: 15
-  standCameraTargetHeight: 0.9
-  crouchCameraTargetHeight: 0.7
 --- !u!114 &2134596082
 MonoBehaviour:
   m_ObjectHideFlags: 0
